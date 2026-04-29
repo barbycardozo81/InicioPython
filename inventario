@@ -1,0 +1,319 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNp1kRf1RNT3tfzl7Txwagh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/barbycardozo81/InicioPython/blob/main/inventario\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "FwWKXfJWcT3x",
+        "outputId": "c69f4e55-3545-44f8-e824-cae6328eb4c2"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Hola me llamo Bárbara estoy aprendiendo phayton'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ],
+      "source": [
+        "(\"Hola me llamo Bárbara estoy aprendiendo phayton\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "wYarnLSHMK2l"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def es_mayor_de_edad(edad):"
+      ],
+      "metadata": {
+        "id": "cs8QvOSsMXQw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "KfayabKFMhLw"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "owwcqWvBMfa3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "crear una funcion que determine si el usuario es mayor de edad\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "oiwyVnSIMUqq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def es_mayor_de_edad(edad):\n",
+        "  if edad >= 18:\n",
+        "    return True\n",
+        "  else:\n",
+        "    return False\n",
+        "\n",
+        "print(es_mayor_de_edad(18))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1v37w1ckMYOQ",
+        "outputId": "421f8b6a-3708-4d5a-9731-0fce16b011cb"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "los bucles en python se utilizan para ejecutar un bloque de codigos de forma repetida.\n",
+        "el bucle for, se utiliza cuando sabemos donde va terminar la repeticion el bucle while, se utiliza cuando No sabemos donde va terminar\n"
+      ],
+      "metadata": {
+        "id": "Olypg94aO1CU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Nueva sección"
+      ],
+      "metadata": {
+        "id": "7uz0xIW5H5-M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for recorrer in range(5):\n",
+        "    print(recorrer)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z6n39dSwPeh4",
+        "outputId": "1154f1e8-edb0-4507-c628-d250a45ee3cc"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "inventario"
+      ],
+      "metadata": {
+        "id": "FGYw08JQmEDm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ingreso de la cantidad inicial de zapatos en inventario\n",
+        "inventario = int(input(\"Ingrese la cantidad inicial de pares de zapatos en la tienda: \"))\n",
+        "transacciones = 0 #Inicializa el contador de transacciones\n",
+        "\n",
+        "#Mientras haya zapatos en inventario\n",
+        "while inventario > 0:\n",
+        "  venta = int(input(\"¿Cuántos pares de zapatos se vendieron en esta transacción? \"))\n",
+        "  #Deduce la venta del inventario y suma al contador de transacciones\n",
+        "  inventario -= venta\n",
+        "  transacciones += 1\n",
+        "\n",
+        "  #Verifica que no se ingrese una venta mayor al inventario\n",
+        "  if inventario < 0:\n",
+        "    print(\"La venta excede el inventario actual, Ingrese un numero valido\")\n",
+        "    inventario += venta #Devuelve la cantidad vendida al inventario\n",
+        "    transacciones -= 1 #Restar la transacción invalida\n",
+        "\n",
+        "print(f\"El inventario ha llegado a 0. Se realizaron {transacciones} transacciones\")"
+      ],
+      "metadata": {
+        "id": "y7xrBT3WnJIM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Ingreso de la cantidad inicial de zapatos en inventario\n",
+        "inventario = int(input(\"Ingrese la cantidad inicial de pares de zapatos en la tienda: \"))\n",
+        "transacciones = 0 #Inicializa el contador de transacciones\n",
+        "\n",
+        "#Mientras haya zapatos en inventario\n",
+        "while inventario > 0:\n",
+        "  venta = int(input(\"¿Cuántos pares de zapatos se vendieron en esta transacción? \"))\n",
+        "  #Deduce la venta del inventario y suma al contador de transacciones\n",
+        "  inventario -= venta\n",
+        "  transacciones += 1\n",
+        "\n",
+        "  #Verifica que no se ingrese una venta mayor al inventario\n",
+        "  if inventario < 0:\n",
+        "    print(\"La venta excede el inventario actual, Ingrese un numero valido\")\n",
+        "    inventario += venta #Devuelve la cantidad vendida al inventario\n",
+        "    transacciones -= 1 #Restar la transacción invalida\n",
+        "\n",
+        "print(f\"El inventario ha llegado a 0. Se realizaron {transacciones} transacciones\")"
+      ],
+      "metadata": {
+        "id": "P-8giy8WnKN8"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "6uBiCmilnOIQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "8jIv2-Q5nKuS"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "WLOFyhbinLCH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "(\"!hola mundo!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "9LN132kgeUSf",
+        "outputId": "9bc42ac7-cbda-4356-d63b-cc8bfa1c6642"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'!hola mundo!'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "y1a3FAy_1CiU"
+      },
+      "source": [
+        "a = 10\n",
+        "b = 3\n",
+        "# Si el '=10' final significaba una asignación a otra variable,\n",
+        "# por ejemplo, para una variable 'c', podrías escribir:\n",
+        "# c = 10\n",
+        "# Si era una condición, como 'a + b == 10', podrías escribir:\n",
+        "# print(a + b == 10)"
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
